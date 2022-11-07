@@ -43,16 +43,16 @@ body {
 
 @keyframes start-animation {
     0% {
-        filter: drop-shadow(0 0 0 #5c5c5c60);
+        filter: drop-shadow(0 0 0 #fff);
     }
     50% {
-        filter: drop-shadow(0 0 0 #5c5c5c60);
+        filter: drop-shadow(0 0 0 #fff);
         translate: 0 -10vmin;
     }
 }
 
 #start-animation :is(svg, span) {
-    filter: drop-shadow(2px 2px 3px #5c5c5c60);
+    filter: drop-shadow(2px 2px 3px #5c5c5c65);
 
     animation: start-animation ease-out 1.75s backwards;
 }
