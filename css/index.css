@@ -13,6 +13,18 @@ body {
     font-family: 'Marianne', sans-serif;
 
     background-color: #f9fcf9;
+    color: #0b0b0b;
+}
+
+a {
+    text-decoration: underline;
+    text-decoration-color: transparent;
+
+    transition: ease-in-out 0.2s text-decoration-color;
+}
+
+a:hover, a:focus {
+    text-decoration-color: #ff00bf;
 }
 
 /*
@@ -137,15 +149,6 @@ nav a {
     padding: 0.35em 0;
 
     vertical-align: top;
-
-    text-decoration: underline;
-    text-decoration-color: transparent;
-
-    transition: ease-in-out 0.2s text-decoration-color;
-}
-
-nav a:hover {
-    text-decoration-color: #ff00bf;
 }
 
 /*
@@ -173,4 +176,55 @@ header h2 {
     padding: 1rem;
 
     width: 70vmin;
+}
+
+/*
+    Main
+*/
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    width: 100%;
+
+    font-size: 1.2em;
+}
+
+main article {
+    width: 100vmin;
+
+    padding: 3em 1em;
+
+    box-sizing: border-box;
+}
+
+main a {
+    color: #0b0b0b;
+
+    text-decoration-color: #0b0b0b;
+}
+
+main .social {
+    margin: 0 1em;
+
+    line-height: 2em;
+}
+
+main .social svg {
+    height: 1em;
+
+    margin-right: 0.5em;
+}
+
+main h2 {
+    font-size: 2em;
+
+    text-align: center;
+}
+
+main h3 {
+    font-size: 1.3em;
+
+    text-align: center;
 }
