@@ -176,6 +176,8 @@ header h2 {
     padding: 1rem;
 
     width: 70vmin;
+
+    text-align: center;
 }
 
 /*
@@ -188,15 +190,19 @@ main {
 
     width: 100%;
 
-    font-size: 1.2em;
+    font-size: 1em;
 }
 
 main article {
     width: 100vmin;
 
-    padding: 3em 1em;
+    padding: 1em;
 
     box-sizing: border-box;
+}
+
+main article:last-child {
+    padding-bottom: 6em;
 }
 
 main a {
@@ -205,26 +211,47 @@ main a {
     text-decoration-color: #0b0b0b;
 }
 
-main .social {
-    margin: 0 1em;
+main h2, main h3 {
+    margin: 1em;
 
-    line-height: 2em;
-}
-
-main .social svg {
-    height: 1em;
-
-    margin-right: 0.5em;
-}
-
-main h2 {
-    font-size: 2em;
+    font-size: 1.9em;
 
     text-align: center;
 }
 
 main h3 {
     font-size: 1.3em;
+}
+
+/*
+    Socials
+*/
+#socials {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+
+    margin: 1em 0;
+
+    width: 100%;
 
     text-align: center;
+}
+
+#socials .social {
+    display: inline-block;
+
+    margin: 1em;
+
+    text-align: center;
+}
+
+#socials .social svg {
+    height: 2em;
+
+    transition: ease-in-out 0.2s fill;
+}
+
+#socials .social:hover svg, #socials .social:focus svg {
+    fill: #ff00bf;
 }
