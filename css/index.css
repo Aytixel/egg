@@ -24,6 +24,12 @@ body {
     }
 }
 
+@keyframes start-animation {
+    from {
+        background-color: #fff;
+    }
+}
+
 #start-animation {
     display: flex;
     justify-content: center;
@@ -34,25 +40,26 @@ body {
     height: 100%;
     width: 100%;
 
-    background-color: #fff;
+    background-color: #f9fcf9;
 
-    animation: start-animation-disappear ease-in 0.5s 3s forwards;
+    animation: start-animation ease-out 1.75s 2.35s backwards, start-animation-disappear ease-in 0.5s 3.5s forwards;
 }
 
-@keyframes start-animation {
+@keyframes start-animation-items {
     0% {
         filter: drop-shadow(0 0 0 #fff);
     }
     50% {
         filter: drop-shadow(0 0 0 #fff);
+
         translate: 0 -10vmin;
     }
 }
 
 #start-animation :is(svg, span) {
-    filter: drop-shadow(2px 2px 3px #5c5c5c65);
+    filter: drop-shadow(2px 2px 3px #5c5c5cda);
 
-    animation: start-animation ease-out 1.75s backwards;
+    animation: start-animation-items ease-out 1.75s backwards;
 }
 
 #start-animation svg  {
