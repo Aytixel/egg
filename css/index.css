@@ -130,8 +130,10 @@ nav {
 }
 
 nav svg {
-    height: 3em;
-    width: 3em;
+    flex-shrink: 0;
+
+    height: 3.1em;
+    width: 3.1em;
 }
 
 nav span {
@@ -149,6 +151,46 @@ nav a {
     padding: 0.35em 0;
 
     vertical-align: top;
+}
+
+#menu-button {
+    display: none;
+}
+
+@media (max-aspect-ratio: 72/53) {
+    nav span[open] {
+        display: flex;
+        flex-direction: column;
+    }
+
+    nav span a {
+        display: inline;
+    }
+
+    nav span:not([open]) a {
+        display: none;
+    }
+
+    #menu-button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        align-self: flex-end;
+
+        margin: 0;
+
+        height: 2.1em;
+        width: 2.1em;
+
+        padding: 0;
+    }
+
+    #menu-button svg {
+        height: 70%;
+        width: 70%;
+
+        fill: #f9fcf9;
+    }
 }
 
 /*
