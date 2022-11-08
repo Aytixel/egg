@@ -5,6 +5,10 @@
     padding: 0;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: 'Marianne', sans-serif;
 
@@ -92,12 +96,12 @@ body {
 /*
     Nav
 */
-
 nav {
     display: flex;
     justify-content: space-between;
 
     position: fixed;
+    z-index: 500;
     top: 1em;
 
     margin: 1em;
@@ -134,5 +138,39 @@ nav a {
 
     vertical-align: top;
 
-    text-decoration: none;
+    text-decoration: underline;
+    text-decoration-color: transparent;
+
+    transition: ease-in-out 0.2s text-decoration-color;
+}
+
+nav a:hover {
+    text-decoration-color: #ff00bf;
+}
+
+/*
+    Header
+*/
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    height: 100vmin;
+    width: 100%;
+}
+
+header h1 {
+    padding: 1rem;
+
+    font-size: 6em;
+
+    text-shadow: 0.05em 0.05em 0 #ff00bf;
+}
+
+header h2 {
+    padding: 1rem;
+
+    width: 70vmin;
 }
