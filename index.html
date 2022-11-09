@@ -94,26 +94,10 @@
         </article>
     </main>
     <script>
-        function debounce(callback, delay, prevent = false){
-            var timer;
-            return function(){
-                if (prevent) arguments[0].preventDefault()
-
-                var args = arguments;
-                var context = this;
-                clearTimeout(timer);
-                timer = setTimeout(function(){
-                    callback.apply(context, args);
-                }, delay)
-            }
-        }
-
-        const focus = debounce(e => {
-            document.getElementById("menu").toggleAttribute("open", e.type == "click")
-        }, 50, true)
-
-        document.getElementById("menu-button").addEventListener("click", focus)
-        document.getElementById("menu-button").addEventListener("focusout", focus)
+        document.getElementById("menu-button").addEventListener("click", e => {
+            e.preventDefault()
+            document.getElementById("menu").toggleAttribute("open")
+        })
     </script>
 </body>
 
