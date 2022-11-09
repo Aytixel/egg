@@ -127,9 +127,10 @@ nav {
 
     border-radius: 0.75em;
 
-    background-color: #0b0b0b;
+    background-color: #0b0b0bad;
 
     filter: drop-shadow(2px 2px 3px #5c5c5cda);
+    backdrop-filter: blur(0.5em);
 }
 
 nav svg {
