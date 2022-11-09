@@ -36,7 +36,9 @@ a:hover, a:focus {
 
         pointer-events: none;
 
-        translate: 0 100%;
+        filter: blur(100vh);
+
+        scale: 10;
     }
 }
 
