@@ -118,7 +118,6 @@ nav {
 
     position: fixed;
     z-index: 500;
-    top: 1em;
 
     margin: 1em;
 
@@ -212,6 +211,8 @@ header {
     background: radial-gradient(circle, rgba(255,0,191,1) 0%, transparent 20%, transparent 100%), radial-gradient(circle, rgba(255,0,191,1) 0%, transparent 15%, transparent 100%);
     background-size: 300% 300%, 300% 300%;
     background-position: 25% 25%, 75% 75%;
+
+    box-shadow: 0 0 1em 1em #f9fcf9 inset;
 }
 
 header h1 {
@@ -234,25 +235,21 @@ header h2 {
     Main
 */
 main {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    left: 50%;
 
-    width: 100%;
+    margin-top: 2em;
+
+    width: 100vmin;
 
     font-size: 1em;
+
+    translate: -50% 0;
 }
 
 main article {
-    width: 100vmin;
-
     padding: 1em;
 
     box-sizing: border-box;
-}
-
-main article:last-child {
-    padding-bottom: 6em;
 }
 
 main a {
@@ -273,6 +270,59 @@ main h3 {
     font-size: 1.3em;
 }
 
+/*
+    Team
+*/
+#team ul {
+    display: flex;
+    flex-direction: column;
+
+    list-style: none;
+}
+
+#team li {
+    display: flex;
+    align-items: center;
+
+    margin: 1em 0;
+
+    width: 100%;
+}
+
+#team li:nth-child(2n) {
+    align-self: flex-end;
+    flex-direction: row-reverse;
+}
+
+#team img {
+    margin-right: 1em;
+
+    height: 7em;
+    width: 7em;
+
+    border-radius: 50%;
+    
+    filter: drop-shadow(2px 2px 3px #5c5c5cda);
+}
+
+#team li:nth-child(2n) img {
+    margin-left: 1em;
+    margin-right: 0;
+}
+
+#team span {
+    display: inline-block;
+}
+
+#team li:nth-child(2n) span {
+    text-align: left;
+}
+
+#team address {
+    font-size: 0.7em;
+
+    word-break: break-all;
+}
 /*
     Socials
 */
@@ -304,4 +354,12 @@ main h3 {
 
 #socials .social:hover svg, #socials .social:focus svg {
     fill: #ff00bf;
+}
+
+/*
+    footer
+*/
+footer {
+    height: 6em;
+    width: 100%;
 }
