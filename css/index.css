@@ -27,6 +27,24 @@ a:hover, a:focus {
     text-decoration-color: #ff00bf;
 }
 
+::-webkit-scrollbar {
+    width: 7.5px;
+}
+  
+::-webkit-scrollbar-track {
+    background: #f9fcf9;
+}
+  
+::-webkit-scrollbar-thumb {
+    border-radius: 3.75px;
+
+    background-color: #0b0b0bc4;
+}
+  
+::-webkit-scrollbar-thumb:hover {
+    background: #ff00bfc4;
+}
+
 /*
     Start animation
 */
