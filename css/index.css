@@ -208,12 +208,6 @@ header {
 
     height: 100vh;
     width: 100%;
-
-    background: radial-gradient(circle, rgba(255,0,191,1) 0%, transparent 20%, transparent 100%), radial-gradient(circle, rgba(255,0,191,1) 0%, transparent 15%, transparent 100%);
-    background-size: 300% 300%, 300% 300%;
-    background-position: 25% 25%, 75% 75%;
-
-    box-shadow: 0 0 1em 1em #f9fcf9 inset;
 }
 
 header h1 {
@@ -232,6 +226,20 @@ header h2 {
     text-align: center;
 }
 
+header > video {
+    position: absolute;
+    left: 0;
+
+    height: 100%;
+    width: 100%;
+
+    opacity: 0.75;
+
+    object-fit: cover;
+
+    filter: blur(0.5em);
+}
+
 /*
     Main
 */
@@ -248,9 +256,15 @@ main {
 }
 
 main article {
-    padding: 1em;
+    padding: 2em 1em;
 
     box-sizing: border-box;
+}
+
+main section {
+    margin-top: 3em;
+
+    padding: 1em 0;
 }
 
 main a {
@@ -259,16 +273,62 @@ main a {
     text-decoration-color: #0b0b0b;
 }
 
-main h2, main h3 {
+main :is(h2, h3) {
     margin: 1em;
 
-    font-size: 1.9em;
+    font-size: 2em;
 
     text-align: center;
 }
 
 main h3 {
     font-size: 1.3em;
+}
+
+/*
+    Origines
+*/
+#origines {
+    left: 50%;
+
+    padding: 1em;
+
+    color: #f9fcf9;
+
+    translate: -50% 0;
+}
+
+#origines > :is(video, div) {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    height: 100%;
+    width: 100%;
+
+    border-radius: 0.75em;
+
+}
+
+#origines > video {
+    object-fit: cover;
+}
+
+#origines > div {
+    background-color: #0b0b0b7a;
+
+    filter: drop-shadow(2px 2px 3px #5c5c5cda);
+    backdrop-filter: blur(0.5em);
+}
+
+#origines u {
+    text-decoration-color: #ff00bf;
+}
+
+@media (min-aspect-ratio: 4/5) {
+    #origines {
+        width: 70vh;
+    }
 }
 
 /*

@@ -11,7 +11,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Aytixel">
     <meta name="description" content="Le gestionnaire qui vous évitera de casser des 🥚.">
-    <title>🥚 Egg 🥚</title>
+    <title>Egg</title>
     <link rel="preload stylesheet" as="style" type="text/css" href="css/font.css">
     <link rel="preload stylesheet" as="style" type="text/css" href="css/index.css">
 </head>
@@ -64,6 +64,7 @@
         </span>
     </nav>
     <header id="home">
+        <video src="video/background-1.webm" poster="video/background-1.webp" muted autoplay loop></video>
         <h1>EGG</h1>
         <h2>Le gestionnaire qui vous évitera de casser des 🥚.</h2>
     </header>
@@ -73,6 +74,16 @@
         </article>
         <article id="about">
             <h2>A propos</h2>
+            <section id="origines">
+                <video src="video/background-2.webm" poster="video/background-2.webp" muted autoplay loop></video>
+                <div></div>
+                <h3>Les origines</h3>
+                <p>
+                    Le projet a commencé comme simple projet pour un cour de <u>Communication à l'université du Mans.</u><br><br>
+                    L'idée vient des deux co-fondateurs <u><b>Hoa et Clément,</b></u> qui on trouvé qu'il manquait d'une offre <b>abordable,</b> dans les suites d'applications de gestion.<br>
+                    Et réellement <b>adaptable, customizable,</b> <u>pour les plus petites structures, comme les plus grosses.</u>
+                </p>
+            </section>
             <section id="team">
                 <h3>Notre équipe</h3>
                 <ul>
@@ -80,7 +91,7 @@
                         <img src="img/unknown.png" alt="Photo de profil">
                         <span>
                             <h4>Clément.F</h4>
-                            <p>Co-Fondateur / PDG</p>
+                            <p>Co-Fondateur / CEO</p>
                             <address>
                                 <a href="mailto:Clement.Fefeu.Etu@univ-lemans.fr">Clement.Fefeu.Etu@univ-lemans.fr</a>
                             </address>
@@ -148,6 +159,9 @@
         </article>
     </main>
     <footer></footer>
+    <script>
+        document.getElementsByTagName("video")[0].playbackRate = 0.75
+    </script>
 </body>
 
 </html>
