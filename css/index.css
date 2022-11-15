@@ -179,7 +179,7 @@ a#menu-button {
     display: none;
 }
 
-@media (max-width: 720px) {
+@media (max-width: 775px) {
     #menu:focus-within {
         display: flex;
         flex-direction: column;
@@ -273,6 +273,12 @@ main {
     translate: -50% 0;
 }
 
+@media (min-aspect-ratio: 4/3) {
+    main {
+        width: 75vw;
+    }
+}
+
 main article {
     padding: 2em 1em;
 
@@ -323,7 +329,6 @@ main h3 {
     width: 100%;
 
     border-radius: 0.75em;
-
 }
 
 #origines > video {
@@ -341,9 +346,9 @@ main h3 {
     text-decoration-color: #ff00bf;
 }
 
-@media (min-aspect-ratio: 4/5) {
+@media (min-aspect-ratio: 3/2) {
     #origines {
-        width: 70vh;
+        width: calc(15% + 88vh);
     }
 }
 
