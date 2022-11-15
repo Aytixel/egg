@@ -273,9 +273,9 @@ main {
     translate: -50% 0;
 }
 
-@media (min-aspect-ratio: 4/3) {
+@media (min-aspect-ratio: 3/2) {
     main {
-        width: 75vw;
+        width: 66.7vw;
     }
 }
 
