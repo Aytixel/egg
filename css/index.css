@@ -273,12 +273,6 @@ main {
     translate: -50% 0;
 }
 
-@media (min-aspect-ratio: 3/2) {
-    main {
-        width: 66.7vw;
-    }
-}
-
 main article {
     padding: 2em 1em;
 
@@ -286,9 +280,10 @@ main article {
 }
 
 main section {
+    margin: 0 auto;
     margin-top: 3em;
 
-    padding: 1em 0;
+    padding: 1em;
 }
 
 main a {
@@ -309,15 +304,17 @@ main h3 {
     font-size: 1.3em;
 }
 
+@media (min-aspect-ratio: 3/2) {
+    main {
+        width: calc(16% + 76vh);
+    }
+}
+
 /*
     Origines
 */
 #origines {
-    padding: 1em;
-
     color: #f9fcf9;
-
-    margin: 0 auto;
 }
 
 #origines > :is(video, div) {
@@ -346,15 +343,15 @@ main h3 {
     text-decoration-color: #ff00bf;
 }
 
-@media (min-aspect-ratio: 3/2) {
-    #origines {
-        width: calc(15% + 88vh);
-    }
-}
-
 /*
     Team
 */
+#team {
+    width: 100%;
+
+    padding: 1em 0;
+}
+
 #team ul {
     display: flex;
     flex-direction: column;
