@@ -54,9 +54,9 @@ a:hover, a:focus {
 
         pointer-events: none;
 
-        filter: blur(30vh);
+        filter: blur(15vh);
 
-        scale: 5;
+        scale: 2;
     }
 }
 
