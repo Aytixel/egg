@@ -17,8 +17,8 @@
         
         let code = ""
         const code_end = debounce(() => {
-            switch (code) {
-                case "ArrowUpArrowUpArrowDownArrowDownArrowLeftArrowRightArrowLeftArrowRightbaEnter":
+            switch (code.toLocaleLowerCase()) {
+                case "arrowuparrowuparrowdownarrowdownarrowleftarrowrightarrowleftarrowrightbaenter":
                     location.href = "https://fr.wikipedia.org/wiki/Pastafarisme"
                     break
                 case "oeuf":
