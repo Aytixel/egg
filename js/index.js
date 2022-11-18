@@ -24,6 +24,9 @@
                 case "oeuf":
                     location.href = "https://maio-egg.tk/html/image.html"
                     break
+                case "sarkozy":
+                    location.href = "https://www.audible.fr/pd/Le-Temps-des-Tempetes-Livre-Audio/B096W2DDK6"
+                    break
             }
 
             code = ""

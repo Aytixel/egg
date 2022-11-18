@@ -442,3 +442,16 @@ footer {
     height: 6em;
     width: 100%;
 }
+
+/*
+    Footer
+*/
+footer {
+    height: 15vh;
+}
+
+footer a {
+    display: block;
+
+    height: 15vh;
+}
