@@ -277,6 +277,7 @@ main {
 
 main article {
     padding: 5em 1em;
+    padding-bottom: 2em;
 
     box-sizing: border-box;
 }
@@ -315,9 +316,72 @@ main h3 {
 /*
     Offering
 */
-#offering canvas {
-    width: 100%;
+#offering>div {
+    top: 5%;
+    left: 5%;
+
+    width: 90%;
     aspect-ratio: 1/1;
+}
+
+#offering canvas {
+    height: 100%;
+    width: 100%;
+}
+
+#offer {
+    position: absolute;
+    top: 50%;
+    left: -5%;
+
+    translate: 0 -50%;
+
+    height: 6.5vmin;
+    width: 110%;
+
+    border-radius: 1.5vmin;
+
+    overflow: hidden;
+
+    box-shadow: 1.5px 1.5px 3px 1px #5c5c5c8a;
+    backdrop-filter: blur(0.5em);
+}
+
+@keyframes offer-disappear {
+    to {
+        top: -2em;
+
+        opacity: 0;
+    }
+}
+
+@keyframes offer-appear {
+    0% {
+        top: 2em;
+
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 0;
+    }
+}
+
+#offer div {
+    top: 0;
+    left: 50%;
+
+    font-size: 3.25vmin;
+    line-height: 6.5vmin;
+    text-align: center;
+
+    opacity: 1;
+
+    pointer-events: none;
+
+    translate: -50% 0;
+
+    animation: offer-appear 0.8s ease-in-out;
 }
 
 /*

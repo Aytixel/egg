@@ -1,18 +1,12 @@
 import {
   AmbientLight,
-  Color,
   DirectionalLight,
-  Mesh,
   MeshStandardMaterial,
   PerspectiveCamera,
-  PlaneGeometry,
-  PointLight,
   Scene,
   WebGLRenderer,
 } from "three";
 import { OBJLoader } from "https://unpkg.com/three@0.146.0/examples/jsm/loaders/OBJLoader.js";
-import { MTLLoader } from "https://unpkg.com/three@0.146.0/examples/jsm/loaders/MTLLoader.js";
-import { OrbitControls } from "https://unpkg.com/three@0.146.0/examples/jsm/controls/OrbitControls.js";
 
 function debounce(callback, delay) {
   let timer;
@@ -116,3 +110,46 @@ function render() {
 }
 
 render();
+
+//
+
+const offer = document.getElementById("offer");
+const offer_text = offer.children[0];
+const offer_list = [
+  "Suivit de projet",
+  "Active directory",
+  "Partage de ressource",
+  "Tchat / Messagerie électronique",
+  "Solution d'aide à distance",
+  "Visioconférence",
+  "Planning",
+  "Congés",
+  "Fiches de paies",
+  "Finances / Trésorerie",
+  "Gestion produits",
+  "Compte client",
+  "Organigramme",
+  "Sondage",
+  "Check list",
+  "App mobile/desktop",
+  "Support multilangue",
+  "Herbergement de donnée / Cloud",
+  "Site web",
+  "Url personnalisée",
+  "Et bien plus encore si vous le désirez",
+];
+
+offer_text.addEventListener("animationend", (e) => {
+  if (e.animationName == "offer-disappear") {
+    offer_list.push(offer_text.textContent = offer_list.shift());
+    offer_text.style.animation = "";
+  }
+});
+
+const switch_offer = () => {
+  offer_text.style.animation = "offer-disappear 0.8s ease-in-out";
+};
+
+offer.addEventListener("click", switch_offer);
+
+setInterval(switch_offer, 5000);
