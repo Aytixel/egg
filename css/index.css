@@ -304,7 +304,7 @@ header:after {
 
     content: "";
 
-    background-color: #f9fcf9;
+    background-color: var(--main-1-color);
 
     transform: skewY(-2deg);
 }
