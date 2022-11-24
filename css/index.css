@@ -285,14 +285,28 @@ header>video {
     position: absolute;
     left: 0;
 
-    height: 100%;
+    height: calc(100% + 10em);
     width: 100%;
 
     opacity: 0.75;
 
     object-fit: cover;
+}
 
-    filter: blur(0.5em);
+header:after {
+    display: block;
+
+    position: absolute;
+    bottom: -7.5em;
+
+    height: 5em;
+    width: 100%;
+
+    content: "";
+
+    background-color: #f9fcf9;
+
+    transform: skewY(-2deg);
 }
 
 /*
