@@ -313,8 +313,7 @@ header:after {
     Main
 */
 main {
-    float: right;
-    right: 50%;
+    left: 50%;
 
     margin-top: 2em;
 
@@ -322,7 +321,7 @@ main {
 
     font-size: 1em;
 
-    translate: 50% 0;
+    translate: -50% 0;
 }
 
 main article {
